@@ -1,6 +1,5 @@
 import javax.imageio.ImageIO;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;

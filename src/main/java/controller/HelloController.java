@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.support.ServletContextResourcePatternResolver;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
+
 import java.awt.*;
 import java.io.BufferedOutputStream;
 import java.io.File;
