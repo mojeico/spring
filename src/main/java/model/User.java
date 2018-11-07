@@ -15,6 +15,8 @@ public class User {
         String password;
         String filename;
 
+        //test
+
 
     public User(String firstname, String lastname, String city, String email, String password, String filename) {
         this.firstname = firstname;
