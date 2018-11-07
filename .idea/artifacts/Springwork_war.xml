@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Springwork:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Spring-work-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Springwork:war exploded" />
+    </root>
+  </artifact>
+</component>
