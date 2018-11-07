@@ -31,8 +31,6 @@ public final class HelloController {
 
 
     User user;
-
-
     ArrayList<User> list ;
 
     {
@@ -51,8 +49,6 @@ public final class HelloController {
         System.out.println("controller showUser");
         model.addAttribute("users", list );
         model.addAttribute("username", lastname );
-
-
         return "users";
     }
 
@@ -68,32 +64,21 @@ public final class HelloController {
     }
 
 
-
-
-
-
-
     @RequestMapping(value = "/form" , method = RequestMethod.POST)
     public String form(@RequestParam ("firstname") String firstname,
                        @RequestParam ("lastname") String lastname,
                        @RequestParam ("city") String city,
                        @RequestParam ("email") String email,
-                       @RequestParam ("password") String password,
-                       @RequestParam("file") MultipartFile file) throws IOException {
-
+                       @RequestParam ("password") String password/*,
+                       @RequestParam("file") MultipartFile file*/) throws IOException {
 
        // User user = new User(firstname,lastname,city,email,password, saveFile(file).getName());
         User user = new User(firstname,lastname,city,email,password, "TestName");
         list.add(user);
 
-
         System.out.println(firstname +" " + password);
         return "redirect:/users/" + lastname;
     }
-
-
-
-    //tetet
 
 
         public File saveFile(MultipartFile file ) throws IOException {
@@ -101,22 +86,13 @@ public final class HelloController {
             byte[] bytes = new byte[0];
             bytes = file.getBytes();
             name = file.getOriginalFilename();
-
-
             File file1 = new File("");
             File uploadedFile = new File(file1.getAbsolutePath() + "\\resource\\" + name);
             System.out.println(uploadedFile.getAbsolutePath());
-
-
-
-
-
             BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(uploadedFile));
             stream.write(bytes);
             stream.flush();
             stream.close();
-
-
             return uploadedFile;
 
         }
@@ -128,13 +104,4 @@ public final class HelloController {
 
 
 
-
-
-    //http://localhost:8080/name?name=gleb
-    @RequestMapping(value = "/name" , method = GET)
-    public String getName( Model model, @RequestParam("name") String name){
-        System.out.println("controller " + name);
-        model.addAttribute("name" , name);
-        return "name";
-    }
 }

@@ -9,7 +9,10 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/webmvc-servlet.xml</param-value>
+        <param-value>
+            /WEB-INF/webmvc-servlet.xml
+          <!--  /WEB-INF/conf-flow.xml-->
+        </param-value>
     </context-param>
 
 
