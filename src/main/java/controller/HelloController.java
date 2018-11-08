@@ -1,29 +1,19 @@
 package controller;
 
 
-import javafx.scene.shape.Path;
 import model.User;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.support.ServletContextResourcePatternResolver;
 import org.springframework.web.multipart.MultipartFile;
 
 
-import java.awt.*;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 public final class HelloController {

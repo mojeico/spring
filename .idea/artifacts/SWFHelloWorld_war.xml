@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SWFHelloWorld:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SWFHelloWorld-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SWFHelloWorld:war exploded" />
+    </root>
+  </artifact>
+</component>

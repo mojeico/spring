@@ -6,12 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Spring-work" />
+        <module name="SWFHelloWorld" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Spring-work" target="1.5" />
-      <module name="Springwork" target="1.5" />
+      <module name="SWFHelloWorld" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

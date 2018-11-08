@@ -3,6 +3,7 @@
 <head>
     <title>Title</title>
 </head>
+
 <body>
 
 <b>Form</b>
@@ -46,10 +47,7 @@
 
 <#--
 
-    <tr>
-        <th><label for="image">Profile image:</label></th>
-        <td><input name="image" type="file"/>
-    </tr>
+
 -->
 
 
@@ -59,7 +57,7 @@
     <input type="submit">
 
 
-
+<form/>
 
 </body>
 </html>
