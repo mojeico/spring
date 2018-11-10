@@ -4,6 +4,6 @@
   xsi:schemaLocation="http://www.springframework.org/schema/webflow 
   http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-  <view-state id="flow" view="flow.jsp"/>
+  <view-state id="flow" view="/WEB-INF/flows/flow/flow.jsp"/>
 
 </flow>
