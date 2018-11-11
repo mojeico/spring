@@ -4,6 +4,34 @@
   xsi:schemaLocation="http://www.springframework.org/schema/webflow 
   http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-  <view-state id="flow" view="/WEB-INF/flows/flow/flow.jsp"/>
+
+
+  <var name="user" class="model.User"/>
+
+
+
+  <view-state id="flow" view="start.jsp" model="user">
+    <transition on="activate" to="show"/>
+  </view-state>
+  
+  
+
+
+
+
+  <action-state id="show">
+    <evaluate expression="showUser.show(user)"/>
+    <transition on="true" to="middle"/>
+  </action-state>
+
+
+
+
+  <view-state id="middle" view="middle.jsp"/>
+  
+  
+
+  <view-state id="and" view="end.jsp"/>
+
 
 </flow>

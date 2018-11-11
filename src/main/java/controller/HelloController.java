@@ -26,7 +26,7 @@ public final class HelloController {
         list = new ArrayList<User>();
 
 
-        list.add(new User("Gleb" , "Mojeico" , "Moldova" , "g.m@gmail.com" , "gm", "imageName"));
+        //list.add(new User("Gleb" , "Mojeico" , "Moldova" , "g.m@gmail.com" , "gm", "imageName"));
 
 
 
@@ -62,8 +62,8 @@ public final class HelloController {
                        @RequestParam("file") MultipartFile file*/) throws IOException {
 
        // User user = new User(firstname,lastname,city,email,password, saveFile(file).getName());
-        User user = new User(firstname,lastname,city,email,password, "TestName");
-        list.add(user);
+       // User user = new User(firstname,lastname,city,email,password, "TestName");
+       // list.add(user);
 
         System.out.println(firstname +" " + password);
         return "redirect:/users/" + lastname;

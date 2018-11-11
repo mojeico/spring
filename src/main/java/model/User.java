@@ -4,8 +4,11 @@ package model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 
-public class User {
+
+@Component
+public class User implements Serializable {
 
 
         String firstname;
@@ -17,6 +20,7 @@ public class User {
 
 
 
+    /*
     public User(String firstname, String lastname, String city, String email, String password, String filename) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -24,11 +28,10 @@ public class User {
         this.email = email;
         this.password = password;
         this.filename = filename;
+    }*/
 
 
-        //test
 
-    }
 
     public String getFirstname() {
         return firstname;
@@ -53,5 +56,15 @@ public class User {
     public String getFilename() { return filename; }
 
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", city='" + city + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", filename='" + filename + '\'' +
+                '}';
+    }
 }

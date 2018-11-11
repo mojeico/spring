@@ -17,31 +17,28 @@
 
     <context:component-scan base-package="controller"/>
     <context:component-scan base-package="model"/>
+    <context:component-scan base-package="service"/>
     <mvc:annotation-driven/>
 
 
 
 
-
-
+    <!--    Связывание компонента-исполнителя-->
     <flow:flow-executor id="flowExecutor" flow-registry="flowRegistry" />
 
 
-
+   <!-- Настройка реестра последовательности-->
     <flow:flow-registry id="flowRegistry"
-                        flow-builder-services="flowBuilderServices"
+
                         base-path="/WEB-INF/flows">
         <flow:flow-location-pattern value="/**/*-flow.xml" />
     </flow:flow-registry>
 
 
-    <flow:flow-builder-services id="flowBuilderServices" 
-                                view-factory-creator="mvcViewFactoryCreator"/>
 
-  <bean id="mvcViewFactoryCreator"
-              class="org.springframework.webflow.mvc.builder.MvcViewFactoryCreator">
-        <property name="defaultViewSuffix" value=".jsp" />
-    </bean>
+
+
+
 
 
 
