@@ -7,6 +7,12 @@
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/flow-conf.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml</file>
         </fileset>
+        <fileset id="fileset2" name="Flow Definition" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/dispatcher-servlet.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Dispatcher Servlet" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/config/dispatcher-servlet.xml</file>
+        </fileset>
       </configuration>
     </facet>
     <facet type="web" name="Web">
@@ -16,6 +22,7 @@
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+          <root url="file:///" relative="/" />
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />

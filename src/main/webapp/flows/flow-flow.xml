@@ -10,7 +10,7 @@
 
 
 
-  <view-state id="flow" view="start.jsp" model="user">
+  <view-state id="flow" view="jsp/start.jsp" model="user">
     <transition on="activate" to="show"/>
   </view-state>
   
@@ -27,11 +27,11 @@
 
 
 
-  <view-state id="middle" view="middle.jsp"/>
+  <view-state id="middle" view="jsp/middle.jsp"/>
   
   
 
-  <view-state id="and" view="end.jsp"/>
+  <view-state id="and" view="jsp/end.jsp"/>
 
 
 </flow>

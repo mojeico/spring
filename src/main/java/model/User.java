@@ -13,11 +13,11 @@ public class User implements Serializable {
 
         String firstname;
         String lastname;
-        String city;
+       /* String city;
         String email;
         String password;
         String filename;
-
+*/
 
 
     /*
@@ -31,6 +31,14 @@ public class User implements Serializable {
     }*/
 
 
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
 
 
     public String getFirstname() {
@@ -41,7 +49,7 @@ public class User implements Serializable {
         return lastname;
     }
 
-    public String getCity() {
+   /* public String getCity() {
         return city;
     }
 
@@ -53,7 +61,7 @@ public class User implements Serializable {
         return password;
     }
 
-    public String getFilename() { return filename; }
+    public String getFilename() { return filename; }*/
 
 
     @Override
@@ -61,10 +69,10 @@ public class User implements Serializable {
         return "User{" +
                 "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", city='" + city + '\'' +
+                /*", city='" + city + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", filename='" + filename + '\'' +
+                ", filename='" + filename + '\'' +*/
                 '}';
     }
 }
