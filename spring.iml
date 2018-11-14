@@ -3,15 +3,8 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Flow Conf" removed="false">
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/flow-conf.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml</file>
-        </fileset>
-        <fileset id="fileset2" name="Flow Definition" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/dispatcher-servlet.xml</file>
-        </fileset>
         <fileset id="fileset3" name="Dispatcher Servlet" removed="false">
-          <file>file://$MODULE_DIR$/src/main/webapp/config/dispatcher-servlet.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/dispatcher-servlet.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -22,7 +15,6 @@
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
-          <root url="file:///" relative="/" />
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
@@ -43,24 +35,24 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="servlet-api" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-web-api:6.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-binding:2.3.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-webflow:2.4.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-core:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-expression:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-js:2.3.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-js-resources:2.3.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-webflow:2.3.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-web:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: opensymphony:ognl:2.6.11" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-binding:2.4.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-js:2.4.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.webflow:spring-js-resources:2.4.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
-    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.3.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:jstl-api:1.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp:jsp-api:2.1" level="project" />
   </component>
 </module>
