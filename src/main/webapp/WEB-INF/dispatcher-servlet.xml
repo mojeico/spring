@@ -12,6 +12,12 @@
 
 
 
+    <import resource="flow-definition.xml"/>
+    <context:component-scan base-package="controller"/>
+    <context:component-scan base-package="model"/>
+    <context:component-scan base-package="service"/>
+
+
 
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -19,6 +25,6 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <import resource="flow-definition.xml"/>
+
 
 </beans>
