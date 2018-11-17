@@ -8,7 +8,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 public class Main {
-    public static void main(String args[ ]) throws FileNotFoundException, MalformedURLException, URISyntaxException {
+    public static void main(String args[ ]) {
 
 
 

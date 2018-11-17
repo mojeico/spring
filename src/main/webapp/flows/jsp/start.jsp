@@ -18,7 +18,7 @@
 <b1>FLOW</b1>
 <b1>FLOW</b1>
 
-<%--@elvariable id="user" type="model.User"--%>
+<%--
 <form:form  method="POST"   modelAttribute="user" >
 
     <label>Имя</label>
@@ -29,13 +29,20 @@
     <br>
 
 
-    <input type="submit" name="_eventId_activate" value="activate" />
-    <input type="submit" name="_eventId_cancel" value="cancel" />
-</form:form>
+    <input type="submit" name="_eventId_create" value="Create User" />
+    <input type="submit" name="_eventId_login" value="Login in" />
+</form:form>--%>
 
 
 
+<a href="${flowExecutionUrl}&_eventId=create">
+    <button>CREATE USER</button>
+</a>
 
+
+<a href="${flowExecutionUrl}&_eventId=login">
+    <button>LOGIN IN</button>
+</a>
 
 </body>
 </html>
