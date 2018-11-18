@@ -13,7 +13,7 @@
 
 
     <import resource="flow-definition.xml"/>
-    <import resource="classpath:conf-spring.xml"/>
+
     <context:component-scan base-package="controller"/>
     <context:component-scan base-package="model"/>
     <context:component-scan base-package="service"/>
