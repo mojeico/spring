@@ -6,6 +6,9 @@
         <fileset id="fileset3" name="Dispatcher Servlet" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/dispatcher-servlet.xml</file>
         </fileset>
+        <fileset id="fileset" name="Conf Spring" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/conf-spring.xml</file>
+        </fileset>
       </configuration>
     </facet>
     <facet type="web" name="Web">
@@ -56,6 +59,7 @@
     <orderEntry type="library" name="Maven: javax.servlet.jsp:jsp-api:2.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.5" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.1.2.RELEASE" level="project" />
   </component>
