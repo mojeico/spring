@@ -24,8 +24,8 @@
 <%--@elvariable id="user" type="model.User"--%>
 <form:form method="post" modelAttribute="user">
 
-    <form:input  path="firstname" type='text'  placeholder='Имя'  />
-    <form:input path="lastname" type='text'   placeholder='Фамилия' />
+    <form:input  path="login" type='text'  placeholder='Login'  />
+    <form:input path="password" type='text'   placeholder='Password' />
 
     <input type="submit" name="_eventId_createUser">
 

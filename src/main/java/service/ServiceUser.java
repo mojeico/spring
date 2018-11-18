@@ -18,14 +18,11 @@ public class ServiceUser implements Serializable {
 
     public void saveUser(User user){
         list.add(user);
-        System.out.println(user.getFirstname() +  "   " + user.getLastname());
+        System.out.println(user.getLogin() +  "   " + user.getLogin());
 
         for(User userlist: list){
             System.out.println(userlist.toString());
         }
-
-
-
 
 
     }
@@ -34,14 +31,10 @@ public class ServiceUser implements Serializable {
 
     public String checkLogin(User user){
 
-
-
-
-
         for(User userlist: list){
 
 
-            boolean bul = user.getLastname().equals(userlist.getLastname()) && user.getFirstname().equals(userlist.getFirstname());
+            boolean bul = user.getLogin().equals(userlist.getLogin()) && user.getPassword().equals(userlist.getPassword());
 
             if(bul){
                 return "true";

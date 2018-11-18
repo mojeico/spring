@@ -10,72 +10,29 @@ import java.io.Serializable;
 @Component
 public class User implements Serializable {
 
+    String login;
+    String password;
 
-        String firstname;
-        String lastname;
-       /* String city;
-        String email;
-        String password;
-        String filename;
-*/
+    public void setLogin(String login) {
+        this.login = login;
+    }
 
-
-    /*
-    public User(String firstname, String lastname, String city, String email, String password, String filename) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.city = city;
-        this.email = email;
+    public void setPassword(String password) {
         this.password = password;
-        this.filename = filename;
-    }*/
-
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-   /* public String getCity() {
-        return city;
-    }
-
-    public String getEmail() {
-        return email;
+    public String getLogin() {
+        return login;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String getFilename() { return filename; }*/
-
-
     @Override
     public String toString() {
-        return "User{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                /*", city='" + city + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", filename='" + filename + '\'' +*/
-                '}';
+        return "User's login is " + login +
+                "and password is " + password ;
     }
-
-
 
 }

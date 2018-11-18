@@ -20,9 +20,9 @@
 <form:form method="post" modelAttribute="user">
 
 
-    <form:input path="firstname" type="text" placeholder="Name"/>
+    <form:input path="login" type="text" placeholder="Login"/>
 
-    <form:input path="lastname" type="text" placeholder="LastName"/>
+    <form:input path="password" type="text" placeholder="Password"/>
 
     <input name="_eventId_login" type="submit" title="enter">
 
