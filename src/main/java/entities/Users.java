@@ -1,4 +1,4 @@
-package dao;
+package entities;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -19,6 +19,7 @@ public class Users {
     public void setId(String id) {
         this.id = id;
     }
+
 
 
     @Basic

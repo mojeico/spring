@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="dao.Users" table="users" schema="public" catalog="users">
+    <class name="entities.Users" table="users" schema="public" catalog="users">
         <id name="id"  />
         <property name="login" column="login"/>
         <property name="password" column="password"/>

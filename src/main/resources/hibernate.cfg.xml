@@ -14,8 +14,8 @@
     <property name="hibernate.connection.password">sys</property>
     <property name="connection.url">jdbc:postgresql://localhost:5432/users</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
-    <mapping class="dao.Users"/>
-    <mapping resource="dao/Users.hbm.xml"/>
+    <mapping class="entities.Users"/>
+    <mapping resource="entities/Users.hbm.xml"/>
 
 
 

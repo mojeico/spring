@@ -1,5 +1,10 @@
-import dao.Test;
+
+import dao.HibernateUtils;
+import dao.impl.UserDaoImpl;
+import entities.Users;
 import model.User;
+
+import org.hibernate.Session;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,14 +13,23 @@ public class Main {
 
 
 
+
+
+        User user = new User();
+
+        user.setLogin("loginHib");
+        user.setPassword("passHib");
+
+
+
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("conf-spring.xml");
 
-        Test test = (Test) applicationContext.getBean("test");
+        UserDaoImpl userDaoImpl = (UserDaoImpl) applicationContext.getBean("userDaoImpl");
 
-        //daoUser.saveUser(user);
+        userDaoImpl.saveUser(user);
 
 
-        test.show();
+
 
 
 
