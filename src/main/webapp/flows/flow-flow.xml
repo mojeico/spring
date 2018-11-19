@@ -6,32 +6,54 @@
 
 
 
-  <var name="user" class="model.User"/>
 
 
-
-  <view-state id="flow" view="jsp/start.jsp" model="user">
-    <transition on="activate" to="show"/>
+  <view-state id="start" view="jsp/start.jsp" >
+    <transition on="create" to="create"/>
+    <transition on="login" to="log"/>
   </view-state>
+
+
+
+
+
+
+
+
+  <subflow-state id="create" subflow="create">
+    <transition on="end" to="successReg"/>
+  </subflow-state>
+
+  <view-state id="successReg" view="jsp/create/successCreate.jsp">
+    <transition on="toStart" to="start"/>
+  </view-state>
+
+
+
+
+
+
+
+
+
+
+
+    <subflow-state id="log" subflow="login">
+        <transition on="end" to="successLogin"/>
+    </subflow-state>
+
+  <view-state id="successLogin" view="jsp/login/successLogin.jsp">
+    <transition on="toStart" to="start"/>
+  </view-state>
+
+
+
   
-  
 
 
 
 
-  <action-state id="show">
-    <evaluate expression="showUser.show(user)"/>
-    <transition on="true" to="middle"/>
-  </action-state>
 
-
-
-
-  <view-state id="middle" view="jsp/middle.jsp"/>
-  
-  
-
-  <view-state id="and" view="jsp/end.jsp"/>
 
 
 </flow>

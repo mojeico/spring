@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+
+
+    <var name="user" class="model.User"/>
+    <var name="serviceUser" class="service.ServiceUser"/>
+
+
+
+
+
+    <view-state id="create" view="jsp/create/createUser.jsp" model="user">
+      <transition on="createUser" to="createUser"/>
+    </view-state>
+
+
+
+    <action-state id="createUser">
+        <evaluate expression="serviceUser.saveUser(user)"/>
+        <transition to="end"/>
+      </action-state>
+
+
+    <end-state id="end"/>
+
+
+
+</flow>
