@@ -10,8 +10,8 @@ public interface UserDao {
 
 
       Session currentSession();
-     void getUser(User user);
+     void getUser(Users user);
      void saveUser(Users user);
-     void deleteUser(User user);
-     void changeUser(User user);
+     void deleteUser(Users user);
+     void changeUser(Users user);
 }

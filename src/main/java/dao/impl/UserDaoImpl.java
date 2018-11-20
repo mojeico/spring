@@ -1,6 +1,5 @@
 package dao.impl;
 
-import dao.HibernateUtil;
 import dao.interfaces.UserDao;
 import entities.Users;
 import model.User;
@@ -16,7 +15,7 @@ public class UserDaoImpl implements UserDao {
 
 
     SessionFactory sessionFactory;
-    Session sess;
+
 
     @Autowired
     public UserDaoImpl(SessionFactory sessionFactory) {
@@ -34,35 +33,34 @@ public class UserDaoImpl implements UserDao {
 
 
 
-    public void getUser(User user) {
+    public void getUser(Users user) {
+
+        Session s = sessionFactory.openSession();
+        s.getTransaction().begin();
+        s.find(Users.class, user.getId());
+        s.getTransaction().commit();
+
 
     }
 
     public void saveUser(Users user) {
 
 
-/*
+
 
         Session s = sessionFactory.openSession();
         s.getTransaction().begin();
         s.save(user);
-*/
-
-
-
-        Session s = sessionFactory.openSession();
-        s.getTransaction().begin();
-        s.persist(user);
         s.getTransaction().commit();
 
 
     }
 
-    public void deleteUser(User user) {
+    public void deleteUser(Users user) {
 
     }
 
-    public void changeUser(User user) {
+    public void changeUser(Users user) {
 
     }
 }

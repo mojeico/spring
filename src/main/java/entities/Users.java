@@ -8,15 +8,17 @@ import java.io.Serializable;
 public class Users implements Serializable {
     private String login;
     private String password;
+    private Integer id;
+
+
 
 
     @Id
-
-    public String getId() {
+    @Column(name = "id")
+    public Integer getId() {
         return id;
     }
-
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -63,7 +65,7 @@ public class Users implements Serializable {
         return result;
     }
 
-    private String id;
+
 
 
 }

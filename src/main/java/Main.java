@@ -14,7 +14,7 @@ public class Main {
 
 
         Users user = new Users();
-        user.setId("2");
+        user.setId(1);
 
         user.setLogin("loginHib2");
         user.setPassword("passHib2");
@@ -25,7 +25,7 @@ public class Main {
 
         UserDaoImpl userDaoImpl = (UserDaoImpl) applicationContext.getBean("userDaoImpl");
 
-        userDaoImpl.saveUser(user);
+        userDaoImpl.deleteUser(user);
 
 
 
