@@ -1,22 +1,13 @@
 package dao.impl;
 
-import dao.HibernateUtils;
+import dao.HibernateUtil;
 import dao.interfaces.UserDao;
 import entities.Users;
 import model.User;
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.engine.transaction.internal.TransactionImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-
-import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Repository
@@ -31,7 +22,6 @@ public class UserDaoImpl implements UserDao {
     public UserDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
 
-         sess = HibernateUtils.getSessionFactory().openSession();
     }
 
 
@@ -48,14 +38,22 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    public void saveUser(User user) {
+    public void saveUser(Users user) {
+
+
+/*
+
+        Session s = sessionFactory.openSession();
+        s.getTransaction().begin();
+        s.save(user);
+*/
 
 
 
-        //currentSession().save(user);
-
-        //sess.save(user);
-
+        Session s = sessionFactory.openSession();
+        s.getTransaction().begin();
+        s.persist(user);
+        s.getTransaction().commit();
 
 
     }

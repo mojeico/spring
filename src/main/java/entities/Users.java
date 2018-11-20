@@ -1,17 +1,17 @@
 package entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Users {
+@Table(name = "users")
+public class Users implements Serializable {
     private String login;
     private String password;
 
 
     @Id
+
     public String getId() {
         return id;
     }
@@ -19,6 +19,7 @@ public class Users {
     public void setId(String id) {
         this.id = id;
     }
+
 
 
 

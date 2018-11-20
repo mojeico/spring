@@ -2,21 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <context:component-scan base-package="entities"/>
+    <context:component-scan base-package="dao"/>
     <context:component-scan base-package="model"/>
     <context:component-scan base-package="service"/>
-    <context:component-scan base-package="dao"/>
-
-
-    <context:annotation-config/>
-
-
-
+    <context:component-scan base-package="entities"/>
 
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -28,23 +20,22 @@
 
 
 
-
-
-
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <property name="packagesToScan" value="dao"/>
+
+     <property name="mappingResources">
+        <list>
+            <value>entities/Users.hbm.xml</value>
+        </list>
+    </property>
+
+     <property name="hibernateProperties">
+            <props>
+                <prop key="dialect">org.hibernate.dialect.PostgresPlusDialect</prop>
+            </props>
+     </property>
     </bean>
-
-
-
-
-   <!--
-    <tx:annotation-driven/>
-    <bean  id="hibernateTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
--->
 
 
 

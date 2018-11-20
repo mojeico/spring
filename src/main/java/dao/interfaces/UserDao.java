@@ -11,7 +11,7 @@ public interface UserDao {
 
       Session currentSession();
      void getUser(User user);
-     void saveUser(User user);
+     void saveUser(Users user);
      void deleteUser(User user);
      void changeUser(User user);
 }

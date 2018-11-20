@@ -1,10 +1,8 @@
 
-import dao.HibernateUtils;
 import dao.impl.UserDaoImpl;
 import entities.Users;
 import model.User;
 
-import org.hibernate.Session;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,10 +13,11 @@ public class Main {
 
 
 
-        User user = new User();
+        Users user = new Users();
+        user.setId("2");
 
-        user.setLogin("loginHib");
-        user.setPassword("passHib");
+        user.setLogin("loginHib2");
+        user.setPassword("passHib2");
 
 
 
