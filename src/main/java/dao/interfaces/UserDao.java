@@ -9,9 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public interface UserDao {
 
 
-      Session currentSession();
-     void getUser(Users user);
+
+     Users getUser(Users user);
      void saveUser(Users user);
      void deleteUser(Users user);
      void changeUser(Users user);
+     boolean checkUser(Users user);
 }

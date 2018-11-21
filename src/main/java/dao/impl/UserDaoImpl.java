@@ -25,29 +25,12 @@ public class UserDaoImpl implements UserDao {
 
 
 
-    public Session currentSession() {
-        return sessionFactory.getCurrentSession();
 
-    }
-
-
-
-
-    public void getUser(Users user) {
-
-        Session s = sessionFactory.openSession();
-        s.getTransaction().begin();
-        s.find(Users.class, user.getId());
-        s.getTransaction().commit();
-
-
-    }
-
-    public void saveUser(Users user) {
 
 
 
 
+    public void saveUser(Users user) {
         Session s = sessionFactory.openSession();
         s.getTransaction().begin();
         s.save(user);
@@ -56,11 +39,66 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    public void deleteUser(Users user) {
+
+
+    public Users getUser(Users user) {
+
+        Session s = sessionFactory.openSession();
+        s.getTransaction().begin();
+        Users users = s.find(Users.class, user.getId());
+
+        s.getTransaction().commit();
+
+
+
+
+        return  users;
 
     }
+
+
+
+
+    public void deleteUser(Users user) {
+        Session s = sessionFactory.openSession();
+        s.getTransaction().begin();
+        s.delete(user);
+        s.getTransaction().commit();
+
+    }
+
+
+
+
 
     public void changeUser(Users user) {
+        Session s = sessionFactory.openSession();
+        s.getTransaction().begin();
+
+        Users users = s.load(Users.class,user.getId());
+        users.setLogin("changeLog");
+        s.update(users);
+
+
+        s.getTransaction().commit();
 
     }
+
+
+
+
+
+    public boolean checkUser(Users user){
+        Users users = this.getUser(user);
+        if(users == null){
+            System.out.println("false");
+            return false;
+        }
+        System.out.println("true");
+        return true;
+    }
+
+
+
+
 }

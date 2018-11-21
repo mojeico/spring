@@ -14,10 +14,10 @@ public class Main {
 
 
         Users user = new Users();
-        user.setId(1);
 
-        user.setLogin("loginHib2");
-        user.setPassword("passHib2");
+        user.setId((long) 5);
+        user.setLogin("gleb1");
+        user.setPassword("gleb1");
 
 
 
@@ -25,7 +25,10 @@ public class Main {
 
         UserDaoImpl userDaoImpl = (UserDaoImpl) applicationContext.getBean("userDaoImpl");
 
-        userDaoImpl.deleteUser(user);
+
+        userDaoImpl.changeUser(user);
+
+
 
 
 

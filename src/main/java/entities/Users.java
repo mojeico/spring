@@ -1,5 +1,6 @@
 package entities;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -8,17 +9,18 @@ import java.io.Serializable;
 public class Users implements Serializable {
     private String login;
     private String password;
-    private Integer id;
+
 
 
 
 
     @Id
     @Column(name = "id")
-    public Integer getId() {
+    Long id;
+    public Long getId() {
         return id;
     }
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -66,6 +68,14 @@ public class Users implements Serializable {
     }
 
 
+    @Override
+    public String toString() {
+        return "Users{" +
+                "login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id +
+                '}';
+    }
 
 
 }
