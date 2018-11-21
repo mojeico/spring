@@ -2,7 +2,7 @@ package dao.impl;
 
 import dao.interfaces.UserDao;
 import entities.Users;
-import model.User;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
