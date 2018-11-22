@@ -16,7 +16,7 @@
 <h1>LOGIN IN</h1>
 
 
-<%--@elvariable id="user" type="model.User"--%>
+<%--@elvariable id="user" type="entities.Users"--%>
 <form:form method="post" modelAttribute="user">
 
 

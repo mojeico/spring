@@ -19,9 +19,7 @@
 <h1>CREATE USER </h1>
 
 
-
-
-<%--@elvariable id="user" type="model.User"--%>
+<%--@elvariable id="user" type="entities.Users"--%>
 <form:form method="post" modelAttribute="user">
 
     <form:input  path="login" type='text'  placeholder='Login'  />

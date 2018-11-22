@@ -1,12 +1,16 @@
 package entities;
 
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Component
 @Entity
 @Table(name = "users")
 public class Users implements Serializable {
+
     private String login;
     private String password;
 

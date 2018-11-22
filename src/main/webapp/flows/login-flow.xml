@@ -5,8 +5,8 @@
 
 
 
-    <var name="user" class="model.User"/>
-    <var name="serviceUser" class="service.ServiceUser"/>
+    <var name="user" class="entities.Users"/>
+    <var name="serviceUser" class="service.impl.ServiceUserImpl"/>
 
 
 
@@ -16,15 +16,15 @@
 
 
     <action-state id="checkLogin">
-        <evaluate expression="serviceUser.checkLogin(user)"/>
-        <transition  on="true" to="end"/>
-        <transition on="false" to="fail"/>
+        <evaluate expression="serviceUser.checkUserPassword(user)"/>
+        <transition on="true" to="true"/>
+        <transition on="false" to="false"/>
     </action-state>
 
-    <view-state id="fail" view="jsp/login/failLogin.jsp"/>
 
 
 
-<end-state id="end"/>
+    <end-state id="true"/>
+    <end-state id="false"/>
 
 </flow>

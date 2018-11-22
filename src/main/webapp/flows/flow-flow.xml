@@ -21,8 +21,15 @@
 
 
   <subflow-state id="create" subflow="create">
-    <transition on="end" to="successReg"/>
+    <transition on="true" to="successReg"/>
+    <transition on="false" to="failReg"/>
   </subflow-state>
+
+
+  <view-state id="failReg" view="jsp/create/failCreate.jsp">
+    <transition on="toStart" to="start"/>
+  </view-state>
+
 
   <view-state id="successReg" view="jsp/create/successCreate.jsp">
     <transition on="toStart" to="start"/>
@@ -39,12 +46,16 @@
 
 
     <subflow-state id="log" subflow="login">
-        <transition on="end" to="successLogin"/>
+        <transition on="true" to="successLogin"/>
+        <transition on="false" to="failLogin"/>
     </subflow-state>
+
 
   <view-state id="successLogin" view="jsp/login/successLogin.jsp">
     <transition on="toStart" to="start"/>
   </view-state>
+
+  <view-state id="failLogin" view="jsp/login/failLogin.jsp"/>
 
 
 

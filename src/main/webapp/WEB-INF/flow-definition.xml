@@ -12,6 +12,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
 
+
 	<bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
 		<property name="flowRegistry" ref="bookSearchFlowRegistry" />
 	</bean>

@@ -1,7 +1,7 @@
 
 import dao.impl.UserDaoImpl;
 import entities.Users;
-import model.User;
+
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -15,9 +15,10 @@ public class Main {
 
         Users user = new Users();
 
-        user.setId((long) 5);
-        user.setLogin("gleb1");
-        user.setPassword("gleb1");
+
+        user.setLogin("anna");
+        user.setPassword("123");
+
 
 
 
@@ -26,7 +27,7 @@ public class Main {
         UserDaoImpl userDaoImpl = (UserDaoImpl) applicationContext.getBean("userDaoImpl");
 
 
-        userDaoImpl.changeUser(user);
+        userDaoImpl.checkUserPassword(user);
 
 
 

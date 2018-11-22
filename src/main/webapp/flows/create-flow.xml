@@ -4,8 +4,9 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
 
 
-    <var name="user" class="model.User"/>
-    <var name="serviceUser" class="service.ServiceUser"/>
+    <var name="user" class="entities.Users"/>
+    <var name="serviceUser" class="service.impl.ServiceUserImpl"/>
+    <var name="dao" class="dao.impl.UserDaoImpl"/>
 
 
 
@@ -17,14 +18,24 @@
 
 
 
+  <!--  <action-state id="createUser">
+        <evaluate expression="dao.saveUser(user)"/>
+        <transition on="true" to="true"/>
+        <transition on="false" to="false"/>
+    </action-state>
+-->
+
     <action-state id="createUser">
         <evaluate expression="serviceUser.saveUser(user)"/>
-        <transition to="end"/>
-      </action-state>
+        <transition on="true" to="true"/>
+        <transition on="false" to="false"/>
+    </action-state>
 
 
-    <end-state id="end"/>
 
+
+    <end-state id="true"/>
+    <end-state id="false"/>
 
 
 </flow>

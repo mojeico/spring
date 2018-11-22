@@ -5,12 +5,16 @@ import entities.Users;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 
 @Repository
-public class UserDaoImpl implements UserDao {
+public class UserDaoImpl implements UserDao , Serializable {
 
 
 
@@ -25,40 +29,49 @@ public class UserDaoImpl implements UserDao {
 
 
 
-
-
-
-
-
-    public void saveUser(Users user) {
-        Session s = sessionFactory.openSession();
-        s.getTransaction().begin();
-        s.save(user);
-        s.getTransaction().commit();
-
-
-    }
-
-
-
     public Users getUser(Users user) {
+
+
 
         Session s = sessionFactory.openSession();
         s.getTransaction().begin();
         Users users = s.find(Users.class, user.getId());
-
         s.getTransaction().commit();
-
-
-
-
         return  users;
 
     }
 
 
 
+    public boolean saveUser(Users user) {
 
+        System.out.println(user.toString());
+
+        Session s = sessionFactory.openSession();
+        s.getTransaction().begin();
+
+        System.out.println(user.toString());
+
+        boolean haveUser = this.checkUserPresence(user);
+        if (haveUser == true){
+            s.save(user);
+            s.getTransaction().commit();
+            return true;
+        }else{
+            s.close();
+        }
+
+        return false;
+
+
+
+
+
+
+
+
+
+    }
     public void deleteUser(Users user) {
         Session s = sessionFactory.openSession();
         s.getTransaction().begin();
@@ -69,35 +82,72 @@ public class UserDaoImpl implements UserDao {
 
 
 
-
-
     public void changeUser(Users user) {
         Session s = sessionFactory.openSession();
         s.getTransaction().begin();
 
         Users users = s.load(Users.class,user.getId());
-        users.setLogin("changeLog");
+        users.setLogin(user.getLogin());
+        user.setPassword(user.getPassword());
         s.update(users);
-
 
         s.getTransaction().commit();
 
     }
 
 
+    public boolean checkUserPassword(Users user){
+        Session s = sessionFactory.openSession();
+        Query query = s.createQuery("select login from Users where login = :login ");
+        query.setParameter("login", user.getLogin());
+
+        ArrayList<Users> list = (ArrayList<Users>) query.list();
+
+        System.out.println(user.toString());
 
 
 
-    public boolean checkUser(Users user){
-        Users users = this.getUser(user);
-        if(users == null){
-            System.out.println("false");
-            return false;
-        }
-        System.out.println("true");
-        return true;
+        Users userPas = list.get(0);
+
+        System.out.println(userPas.toString());
+
+
+            if (userPas.getPassword() == user.getPassword()){
+              return true;
+            }else{
+                return false;
+            }
+
+
     }
 
+
+
+
+    public boolean checkUserPresence(Users user){
+        Session s = sessionFactory.openSession();
+        Query query = s.createQuery("select login from Users where login = :login ");
+        query.setParameter("login", user.getLogin());
+
+
+
+
+        ArrayList<Users> list = (ArrayList<Users>) query.list();
+
+        System.out.println(user.toString());
+
+        if(list.size() == 0){
+            System.out.println("true");
+            return true;
+        }
+        System.out.println(false);
+       return false;
+
+
+
+
+
+    }
 
 
 
