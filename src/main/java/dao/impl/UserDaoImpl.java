@@ -45,12 +45,12 @@ public class UserDaoImpl implements UserDao , Serializable {
 
     public boolean saveUser(Users user) {
 
-        System.out.println(user.toString());
+
 
         Session s = sessionFactory.openSession();
         s.getTransaction().begin();
 
-        System.out.println(user.toString());
+
 
         boolean haveUser = this.checkUserPresence(user);
         if (haveUser == true){
@@ -134,10 +134,10 @@ public class UserDaoImpl implements UserDao , Serializable {
 
         ArrayList<Users> list = (ArrayList<Users>) query.list();
 
-        System.out.println(user.toString());
+
 
         if(list.size() == 0){
-            System.out.println("true");
+
             return true;
         }
         System.out.println(false);

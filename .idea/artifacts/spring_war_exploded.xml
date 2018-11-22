@@ -15,8 +15,6 @@
           <element id="library" level="project" name="Maven: org.springframework.webflow:spring-js-resources:2.4.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.0.RELEASE" />
@@ -43,6 +41,12 @@
           <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
           <element id="library" level="project" name="Maven: org.dom4j:dom4j:2.1.1" />
           <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.4.Final" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.1.1.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">
