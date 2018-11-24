@@ -12,11 +12,9 @@
 
 
 
+    <import resource="spring-security-config.xml"/>
     <import resource="flow-definition.xml"/>
     <import resource="classpath:conf-spring.xml"/>
-
-
-
 
 
 
