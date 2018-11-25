@@ -18,17 +18,19 @@
 <form method="POST" action="/login" class="box login">
 
 
-    <fieldset class="boxBody">
-
-
-        <label> Username </label> <input type='text' name="login" placeholder="Login">
 
 
 
-        <label> Password </label> <input type='password' name="password" placeholder="Password"/>
+        <label> Username </label>
+        <input type='text' name="login" placeholder="Login">
 
 
-    </fieldset>
+        <label> Password </label>
+        <input type='password' name="password" placeholder="Password"/>
+        <br>
+
+        <p><input type="checkbox" name="remember"  /> Remember me</p>
+
 
 
 
