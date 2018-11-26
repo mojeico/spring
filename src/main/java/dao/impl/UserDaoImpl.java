@@ -87,7 +87,7 @@ public class UserDaoImpl implements UserDao , Serializable {
         s.getTransaction().begin();
 
         Users users = s.load(Users.class,user.getId());
-        users.setLogin(user.getLogin());
+        users.setUsername(user.getUsername());
         user.setPassword(user.getPassword());
         s.update(users);
 
@@ -98,8 +98,8 @@ public class UserDaoImpl implements UserDao , Serializable {
 
     public boolean checkUserPassword(Users user){
         Session s = sessionFactory.openSession();
-        Query query = s.createQuery("select login from Users where login = :login ");
-        query.setParameter("login", user.getLogin());
+        Query query = s.createQuery("select username from Users where username = :login ");
+        query.setParameter("login", user.getUsername());
 
         ArrayList<Users> list = (ArrayList<Users>) query.list();
 
@@ -126,8 +126,8 @@ public class UserDaoImpl implements UserDao , Serializable {
 
     public boolean checkUserPresence(Users user){
         Session s = sessionFactory.openSession();
-        Query query = s.createQuery("select login from Users where login = :login ");
-        query.setParameter("login", user.getLogin());
+        Query query = s.createQuery("select username from Users where username = :login ");
+        query.setParameter("login", user.getUsername());
 
 
 

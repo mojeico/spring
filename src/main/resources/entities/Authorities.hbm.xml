@@ -4,12 +4,11 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="entities.Users" table="users" schema="public" catalog="users">
+    <class name="entities.Authorities" table="authorities" schema="public" catalog="users">
         <id name="id" type="java.lang.Long">
             <column name="id" />
             <generator class="identity" />
         </id>
-        <property name="username" column="username"/>
-        <property name="password" column="password"/>
+        <property name="authority" column="authority"/>
     </class>
 </hibernate-mapping>

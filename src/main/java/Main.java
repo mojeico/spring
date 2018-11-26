@@ -16,7 +16,7 @@ public class Main {
         Users user = new Users();
 
 
-        user.setLogin("anna");
+        user.setUsername("anna");
         user.setPassword("123");
 
 

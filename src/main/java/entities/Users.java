@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Table(name = "users")
 public class Users implements Serializable {
 
-    private String login;
+    private String username;
     private String password;
 
 
@@ -32,13 +32,13 @@ public class Users implements Serializable {
 
 
     @Basic
-    @Column(name = "login")
-    public String getLogin() {
-        return login;
+    @Column(name = "username")
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUsername(String login) {
+        this.username = login;
     }
 
     @Basic
@@ -58,7 +58,7 @@ public class Users implements Serializable {
 
         Users users = (Users) o;
 
-        if (login != null ? !login.equals(users.login) : users.login != null) return false;
+        if (username != null ? !username.equals(users.username) : users.username != null) return false;
         if (password != null ? !password.equals(users.password) : users.password != null) return false;
 
         return true;
@@ -66,7 +66,7 @@ public class Users implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = login != null ? login.hashCode() : 0;
+        int result = username != null ? username.hashCode() : 0;
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
     }
@@ -75,7 +75,7 @@ public class Users implements Serializable {
     @Override
     public String toString() {
         return "Users{" +
-                "login='" + login + '\'' +
+                "login='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", id=" + id +
                 '}';

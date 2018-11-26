@@ -10,13 +10,12 @@
     <property name="hibernate.dialect">org.hibernate.dialect.PostgresPlusDialect</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
-    <property name="hibernate.connection.username">glebmojeico</property>
-    <property name="hibernate.connection.password">sys</property>
     <property name="connection.url">jdbc:postgresql://localhost:5432/users</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
     <mapping class="entities.Users"/>
     <mapping resource="entities/Users.hbm.xml"/>
-
+    <mapping class="entities.Authorities"/>
+    <mapping resource="entities/Authorities.hbm.xml"/>
 
 
     <!-- <property name="connection.username"/> -->
