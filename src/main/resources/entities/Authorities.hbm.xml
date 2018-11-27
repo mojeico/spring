@@ -9,6 +9,7 @@
             <column name="id" />
             <generator class="identity" />
         </id>
+        <property name="username" column="username"/>
         <property name="authority" column="authority"/>
     </class>
 </hibernate-mapping>

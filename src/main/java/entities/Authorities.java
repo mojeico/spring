@@ -26,15 +26,22 @@ public class Authorities implements Serializable {
 
 
 
+    private String username;
+    @Basic
+    @Column(name = "username")
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
 
 
 
     private String authority;
-
-
-
-
-
     @Basic
     @Column(name = "authority")
     public String getAuthority() {
@@ -44,6 +51,15 @@ public class Authorities implements Serializable {
     public void setAuthority(String authority) {
         this.authority = authority;
     }
+
+
+
+
+
+
+
+
+
 
     @Override
     public boolean equals(Object o) {
