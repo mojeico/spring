@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.support.DaoSupport;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import service.interfaces.ServiceUser;
 
@@ -20,7 +22,12 @@ public class ServiceUserImpl implements ServiceUser , Serializable {
     @Autowired
     UserDaoImpl userDaoImpl ;
 
+
+
     public String saveUser(Users user) {
+
+
+
 
         if(userDaoImpl.saveUser(user)){
             return "true";

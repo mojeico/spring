@@ -5,6 +5,8 @@ import entities.Users;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class Main {
     public static void main(String args[ ]) {
@@ -13,11 +15,18 @@ public class Main {
 
 
 
+
         Users user = new Users();
 
 
-        user.setUsername("anna");
-        user.setPassword("123");
+        user.setUsername("andrie");
+
+
+
+        user.setPassword("a123");
+
+
+
 
 
 
@@ -27,15 +36,19 @@ public class Main {
         UserDaoImpl userDaoImpl = (UserDaoImpl) applicationContext.getBean("userDaoImpl");
 
 
-        userDaoImpl.checkUserPassword(user);
+        userDaoImpl.saveUser(user);
 
 
 
 
 
 
+/*
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String hashedPassword = passwordEncoder.encode("gleb");
 
 
+        System.out.println(hashedPassword);*/
 
     }
 

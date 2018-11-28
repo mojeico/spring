@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
@@ -49,6 +51,16 @@ public class UserDaoImpl implements UserDao , Serializable {
 
         Session s = sessionFactory.openSession();
         s.getTransaction().begin();
+
+
+
+
+
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(11);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        System.out.println(user.getPassword());
+
+
 
 
 
